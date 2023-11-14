@@ -3,6 +3,7 @@ on:
   schedule:
     # Every five minutes (maximum frequency allowed by GitHub)
     - cron:  '*/5 * * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write

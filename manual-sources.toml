@@ -1,0 +1,5 @@
+[[audits.rand_chacha]]
+who = "Noah Jelich <n.jelich@hacken.io>"
+criteria = ["safe-to-deploy", "crypto-safe"]
+version = "0.3.1"
+notes = "Hasn't been updated in 2 years."

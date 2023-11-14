@@ -1,0 +1,7 @@
+https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml
+https://raw.githubusercontent.com/mozilla/cargo-vet/main/supply-chain/audits.toml
+https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml
+https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT
+https://fuchsia.googlesource.com/fuchsia/+/refs/heads/main/third_party/rust_crates/supply-chain/audits.toml?format=TEXT
+https://raw.githubusercontent.com/google/rust-crate-audits/main/manual-sources/google3-audits.toml
+https://raw.githubusercontent.com/hknio/rust-supply-chain/main/manual-sources.toml

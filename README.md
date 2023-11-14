@@ -11,7 +11,14 @@ others.
 
 ## Usage
 
-To import Hacken's audit list into another cargo-vet instance, add the following
+Install and initialize cargo-vet:
+
+```
+cargo install cargo-vet
+cargo vet init
+```
+
+To import Hacken's audit list into another cargo-vet instance (inside the `supply-chain` directory), add the following
 lines to your `config.toml`:
 
 ```

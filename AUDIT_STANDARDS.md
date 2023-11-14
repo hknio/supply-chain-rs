@@ -18,6 +18,7 @@ Outlined below are the auditing criteria and the requirements for auditors in th
 | [`does-not-implement-crypto`]         | **Generalist SWE**                                |
 | [`safe-to-run`]                       | **Generalist SWE**                                |
 | [`safe-to-deploy`]                    | **Generalist SWE**                                |
+| [`contains-unsafe`]                   | **Rust expertise**                                |
 
 [`crypto-safe`]: #crypto-safe
 [`does-not-implement-crypto`]: #does-not-implement-crypto

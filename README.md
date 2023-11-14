@@ -40,3 +40,15 @@ notes = "Hasn't been updated in 2 years."
 
 Refer to [manual-sources.toml](manual-sources.toml) and [sources.list](sources.list).
 
+## Audit Standards
+
+Contributors seeking criteria for auditing can refer to the table for guidance. Detailed criteria can be found in the [AUDIT_STANDARDS.md](AUDIT_STANDARDS.md) document.
+
+| **Criteria**                          | **Requires**                                      |
+|---------------------------------------|---------------------------------------------------|
+| [`crypto-safe`]                       | **Cryptography expertise** and **Rust expertise** |
+| [`does-not-implement-crypto`]         | **Generalist SWE**                                |
+| [`safe-to-run`]                       | **Generalist SWE**                                |
+| [`safe-to-deploy`]                    | **Generalist SWE**                                |
+| [`contains-unsafe`]                   | **Rust expertise**                                |
+

@@ -24,6 +24,7 @@ Outlined below are the auditing criteria and the requirements for auditors in th
 [`does-not-implement-crypto`]: #does-not-implement-crypto
 [`safe-to-run`]: #safe-to-run
 [`safe-to-deploy`]: #safe-to-deploy
+[`contains-unsafe`]: #contains-unsafe
 
 ## Common Criteria
 

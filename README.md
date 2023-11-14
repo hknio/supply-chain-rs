@@ -13,18 +13,20 @@ others.
 
 Install and initialize cargo-vet:
 
-```
+```bash
 cargo install cargo-vet
-cargo vet init
+cargo vet init # note: this will exempt all currently installed dependencies=
 ```
 
 To import Hacken's audit list into another cargo-vet instance (inside the `supply-chain` directory), add the following
 lines to your `config.toml`:
 
-```
+```toml
 [imports.hacken]
 url = "https://raw.githubusercontent.com/hknio/rust-supply-chain/main/audits.toml"
 ```
+
+Use `cargo vet suggest` to suggest audits for your existing dependencies, and `cargo vet` to audit new dependencies. For more details, see the [command documentation](https://mozilla.github.io/cargo-vet/performing-audits.html).
 
 ## Contributing
 

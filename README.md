@@ -15,7 +15,7 @@ Install and initialize cargo-vet:
 
 ```bash
 cargo install cargo-vet
-cargo vet init # note: this will exempt all currently installed dependencies=
+cargo vet init # note: this will exempt all currently installed dependencies
 ```
 
 To import Hacken's audit list into another cargo-vet instance (inside the `supply-chain` directory), add the following

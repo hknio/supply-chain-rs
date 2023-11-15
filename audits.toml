@@ -5773,10 +5773,28 @@ criteria = "safe-to-run"
 version = "0.9.1"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
+[[audits.grpcio]]
+who = "Abhishek Pandit-Subedi <abhishekpandit@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+delta = "0.9.1 -> 0.13.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
 [[audits.grpcio-compiler]]
 who = "Android Legacy"
 criteria = "safe-to-run"
 version = "0.6.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.grpcio-compiler]]
+who = "Abhishek Pandit-Subedi <abhishekpandit@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+delta = "0.6.0 -> 0.7.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.grpcio-compiler]]
+who = "Abhishek Pandit-Subedi <abhishekpandit@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+delta = "0.7.0 -> 0.13.0"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.grpcio-sys]]
@@ -5789,6 +5807,12 @@ aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust
 who = "Android Legacy"
 criteria = "safe-to-run"
 version = "0.9.1+1.38.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.grpcio-sys]]
+who = "Android Legacy"
+criteria = "safe-to-run"
+version = "0.13.0+1.56.2-patched"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.guid_win]]
@@ -7994,6 +8018,13 @@ criteria = "safe-to-run"
 version = "1.13.0"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
+[[audits.num_cpus]]
+who = "Alex Crichton <alex@alexcrichton.com>"
+criteria = "safe-to-deploy"
+delta = "1.15.0 -> 1.16.0"
+notes = "Some minor platform updates but no major change to any code."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
 [[audits.num_threads]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = ["safe-to-run", "does-not-implement-crypto"]
@@ -8977,6 +9008,12 @@ criteria = ["safe-to-run", "does-not-implement-crypto"]
 version = "3.2.0"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
+[[audits.protobuf]]
+who = "Abhishek Pandit-Subedi <abhishekpandit@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+delta = "2.27.1 -> 2.28.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
 [[audits.protobuf-codegen]]
 who = "Android Legacy"
 criteria = "safe-to-run"
@@ -8987,6 +9024,12 @@ aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust
 who = "ChromeOS Audio"
 criteria = ["safe-to-run", "does-not-implement-crypto"]
 version = "3.2.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.protobuf-codegen]]
+who = "Abhishek Pandit-Subedi <abhishekpandit@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+delta = "2.27.1 -> 2.28.0"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.protobuf-parse]]
@@ -9007,16 +9050,34 @@ criteria = ["does-not-implement-crypto", "rule-of-two-safe-to-deploy"]
 version = "2.27.1"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
+[[audits.protoc]]
+who = "Abhishek Pandit-Subedi <abhishekpandit@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+delta = "2.27.1 -> 2.28.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
 [[audits.protoc-grpcio]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = ["safe-to-run", "does-not-implement-crypto"]
 version = "2.0.0"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
+[[audits.protoc-grpcio]]
+who = "Abhishek Pandit-Subedi <abhishekpandit@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+delta = "2.0.0 -> 3.0.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
 [[audits.protoc-rust]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = ["does-not-implement-crypto", "rule-of-two-safe-to-deploy"]
 version = "2.27.1"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.protoc-rust]]
+who = "Abhishek Pandit-Subedi <abhishekpandit@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+delta = "2.27.1 -> 2.28.0"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.ptr_meta]]
@@ -10944,6 +11005,20 @@ who = "Vovo Yang <vovoy@google.com>"
 criteria = ["safe-to-run", "does-not-implement-crypto"]
 version = "1.29.1"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.tokio]]
+who = "David Koloski <dkoloski@google.com>"
+criteria = ["safe-to-deploy", "ub-risk-2"]
+delta = "1.19.2 -> 1.20.5"
+notes = "Reviewed on http://fxrev.dev/904806"
+aggregated-from = "https://fuchsia.googlesource.com/fuchsia/+/refs/heads/main/third_party/rust_crates/supply-chain/audits.toml?format=TEXT"
+
+[[audits.tokio]]
+who = "David Koloski <dkoloski@google.com>"
+criteria = ["safe-to-deploy", "ub-risk-2"]
+delta = "1.20.5 -> 1.25.2"
+notes = "Reviewed at https://fxrev.dev/906324"
+aggregated-from = "https://fuchsia.googlesource.com/fuchsia/+/refs/heads/main/third_party/rust_crates/supply-chain/audits.toml?format=TEXT"
 
 [[audits.tokio]]
 who = "Alex Crichton <alex@alexcrichton.com>"
@@ -13797,6 +13872,13 @@ criteria = "safe-to-deploy"
 user-id = 539
 start = "2023-02-05"
 end = "2024-07-11"
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
+[[trusted.errno]]
+criteria = "safe-to-deploy"
+user-id = 6825
+start = "2023-08-29"
+end = "2024-11-14"
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
 [[trusted.fd-lock]]

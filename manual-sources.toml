@@ -3,3 +3,9 @@ who = "Noah Jelich <n.jelich@hacken.io>"
 criteria = ["safe-to-deploy", "crypto-safe"]
 version = "0.3.1"
 notes = "Hasn't been updated in 2 years."
+
+[[audits.curve25519-dalek]]
+who = "ohaponiuk-hacken <o.haponiuk@hacken.io>"
+criteria = "safe-to-deploy"
+version = "3.2.0"
+notes = "This version is safe but versions lower than 2.0 have a critical vulnerability."

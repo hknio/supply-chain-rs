@@ -18,12 +18,14 @@ Outlined below are the auditing criteria and the requirements for auditors in th
 | [`does-not-implement-crypto`]         | **Generalist SWE**                                |
 | [`safe-to-run`]                       | **Generalist SWE**                                |
 | [`safe-to-deploy`]                    | **Generalist SWE**                                |
+| [`vulnerable`]                        | **Generalist SWE**                                |
 | [`contains-unsafe`]                   | **Rust expertise**                                |
 
 [`crypto-safe`]: #crypto-safe
 [`does-not-implement-crypto`]: #does-not-implement-crypto
 [`safe-to-run`]: #safe-to-run
 [`safe-to-deploy`]: #safe-to-deploy
+[`vulnerable`]: #vulnerable
 [`contains-unsafe`]: #contains-unsafe
 
 ## Common Criteria
@@ -80,6 +82,17 @@ This criteria, part of cargo vet, identifies a crate not introducing serious sec
 *   Discretion is allowed but must be documented in the audit record's `notes` field.
 *   This criteria is not a soundness review; see the "Soundness" group for soundness-related criteria.
 *   Deployment requirements may vary across organizations.
+
+### `vulnerable`
+
+Requires **Generalist SWE**
+
+This criteria identifies a crate introducing known security vulnerabilities.
+
+#### Criteria Guidelines
+
+*   While no specific expertise is required, generalist SWEs must be familiar with all auditing criteria and standards.
+*   Vulnerabilities must be documented in the audit record's `notes` field.
 
 ### `contains-unsafe`
 

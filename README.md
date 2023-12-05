@@ -52,5 +52,6 @@ Contributors seeking criteria for auditing can refer to the table for guidance. 
 | [`does-not-implement-crypto`]         | **Generalist SWE**                                |
 | [`safe-to-run`]                       | **Generalist SWE**                                |
 | [`safe-to-deploy`]                    | **Generalist SWE**                                |
+| [`vulnerable`]                        | **Generalist SWE**                                |
 | [`contains-unsafe`]                   | **Rust expertise**                                |
 

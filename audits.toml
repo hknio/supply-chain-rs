@@ -12987,6 +12987,13 @@ criteria = "safe-to-run"
 delta = "0.3.6 -> 0.3.6@git:9d081461ae1167eb321585ce424f4fef6cf0092b"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.wasi-nn]]
+who = "Andrew Brown <andrew.brown@intel.com>"
+criteria = "safe-to-deploy"
+version = "0.6.0"
+notes = "This crate contains `unsafe` code due to its purpose: it wraps up `witx-bindgen`-generated code that calls the raw wasi-nn API."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
 [[audits.wasm-bindgen-shared]]
 who = "Pat Hickey <phickey@fastly.com>"
 criteria = "safe-to-deploy"

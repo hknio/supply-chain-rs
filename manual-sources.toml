@@ -9,3 +9,8 @@ who = "ohaponiuk-hacken <o.haponiuk@hacken.io>"
 criteria = "safe-to-deploy"
 version = "3.2.0"
 notes = "This version is safe but versions lower than 2.0 have a critical vulnerability."
+
+[[audits.bitcoin_hashes]]
+who = "ohaponiuk-hacken <o.haponiuk@hacken.io>"
+criteria = "safe-to-deploy"
+version = "0.13.0"

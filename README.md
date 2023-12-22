@@ -23,7 +23,7 @@ lines to your `config.toml`:
 
 ```toml
 [imports.hacken]
-url = "https://raw.githubusercontent.com/hknio/rust-supply-chain/main/audits.toml"
+url = "https://raw.githubusercontent.com/hknio/supply-chain-rs/main/audits.toml"
 ```
 
 Use `cargo vet suggest` to suggest audits for your existing dependencies, and `cargo vet` to audit new dependencies. For more details, see the [command documentation](https://mozilla.github.io/cargo-vet/performing-audits.html).

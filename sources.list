@@ -1,3 +1,4 @@
+https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml
 https://raw.githubusercontent.com/mozilla/cargo-vet/main/supply-chain/audits.toml
 https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml
 https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT

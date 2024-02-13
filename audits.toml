@@ -3208,6 +3208,13 @@ version = "0.15.3"
 notes = "no build, no unsafe, inputs to cargo command are reasonably sanitized"
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
+[[audits.cargo_metadata]]
+who = "Alex Crichton <alex@alexcrichton.com>"
+criteria = "safe-to-deploy"
+delta = "0.17.0 -> 0.18.1"
+notes = "No major changes, no unsafe code here."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
 [[audits.cast]]
 who = "Alex Crichton <alex@alexcrichton.com>"
 criteria = "safe-to-run"
@@ -3737,6 +3744,13 @@ criteria = "ub-risk-3"
 version = "3.0.1"
 notes = "Reviewed in CL 558181122"
 aggregated-from = "https://raw.githubusercontent.com/google/rust-crate-audits/main/manual-sources/google3-audits.toml"
+
+[[audits.cpp_demangle]]
+who = "Alex Crichton <alex@alexcrichton.com>"
+criteria = "safe-to-deploy"
+delta = "0.3.5 -> 0.4.3"
+notes = "No substantive changes to `unsafe` code and otherwise all looks good."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
 [[audits.cpufeatures]]
 who = "Mike Hommey <mh+mozilla@glandium.org>"
@@ -15425,6 +15439,13 @@ start = "2022-04-15"
 end = "2024-07-06"
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
+[[trusted.cpp_demangle]]
+criteria = "safe-to-deploy"
+user-id = 696
+start = "2019-07-30"
+end = "2025-02-12"
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
 [[trusted.dtoa]]
 criteria = "safe-to-deploy"
 user-id = 3618
@@ -15936,6 +15957,13 @@ start = "2019-04-26"
 end = "2024-04-25"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[trusted.serde_spanned]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2023-01-20"
+end = "2025-02-12"
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
 [[trusted.serde_yaml]]
 criteria = "safe-to-deploy"
 user-id = 3618
@@ -16053,6 +16081,27 @@ criteria = "safe-to-deploy"
 user-id = 1
 start = "2019-05-16"
 end = "2024-07-06"
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
+[[trusted.toml]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2022-12-14"
+end = "2025-02-12"
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
+[[trusted.toml_datetime]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2022-10-21"
+end = "2025-02-12"
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
+[[trusted.toml_edit]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2021-09-13"
+end = "2025-02-12"
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
 [[trusted.unicode-ident]]
@@ -16242,6 +16291,13 @@ criteria = "safe-to-deploy"
 user-id = 64539
 start = "2021-10-27"
 end = "2024-06-17"
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
+[[trusted.winnow]]
+criteria = "safe-to-deploy"
+user-id = 6743
+start = "2023-02-22"
+end = "2025-02-12"
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
 [[trusted.winx]]

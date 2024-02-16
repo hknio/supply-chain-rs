@@ -4715,6 +4715,12 @@ version = "0.8.0"
 notes = "This crates was written by Sentry and I've fully audited it as Firefox crash reporting machinery relies on it."
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.deqp-runner]]
+who = "Matt Turner <msturner@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+delta = "0.13.1 -> 0.18.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
 [[audits.deranged]]
 who = "Taylor Cramer <cramertj@google.com>"
 criteria = "ub-risk-1"
@@ -4865,6 +4871,12 @@ who = "Makoto Kato <m_kato@ga2.so-net.ne.jp>"
 criteria = "safe-to-deploy"
 delta = "0.5.2 -> 0.7.0"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.dirs-sys-next]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+version = "0.1.2"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.displaydoc]]
 who = "Makoto Kato <m_kato@ga2.so-net.ne.jp>"
@@ -5621,6 +5633,17 @@ criteria = "safe-to-deploy"
 version = "1.0.7"
 notes = "Simple hasher implementation with no unsafe code."
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.fnv]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+version = "1.0.7"
+notes = """
+fnv explicitly documents that it does not attempt to be crypto-secure, nor
+does it try to guard against collisions. Hence, this does not implement
+crypto.
+"""
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.foreign-types]]
 who = "Teodor Tanasoaia <ttanasoaia@mozilla.com>"
@@ -7240,10 +7263,26 @@ additionally doesn't reach for ambient capabilities.
 """
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
+[[audits.indoc]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = ["does-not-implement-crypto", "rule-of-two-safe-to-deploy"]
+version = "0.3.6"
+notes = """
+This crate simply reexports indoc_impl. There's therefore no code
+specific to this crate to audit.
+"""
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
 [[audits.indoc-impl]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = ["does-not-implement-crypto", "rule-of-two-safe-to-deploy"]
 version = "0.3.6"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.inflections]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+version = "1.1.1"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.inherent]]
@@ -9177,6 +9216,12 @@ delta = "0.2.15 -> 0.2.16"
 notes = "Reviewed in CL 562140156"
 aggregated-from = "https://raw.githubusercontent.com/google/rust-crate-audits/main/manual-sources/google3-audits.toml"
 
+[[audits.number_prefix]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = ["does-not-implement-crypto", "rule-of-two-safe-to-deploy"]
+version = "0.4.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
 [[audits.object]]
 who = "Mike Hommey <mh+mozilla@glandium.org>"
 criteria = "safe-to-deploy"
@@ -9594,6 +9639,12 @@ aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-ch
 who = "Android Legacy"
 criteria = "safe-to-run"
 version = "1.0.4"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.paste-impl]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+version = "0.1.18"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.pbkdf2]]
@@ -10023,6 +10074,12 @@ who = "Simon Friedberger <simon@mozilla.com>"
 criteria = "safe-to-deploy"
 version = "0.9.1"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.proc-macro-crate]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+version = "1.2.1"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.proc-macro-error-attr]]
 who = "George Burgess IV <gbiv@google.com>"
@@ -10832,6 +10889,12 @@ criteria = ["safe-to-run", "does-not-implement-crypto"]
 version = "0.1.6"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
+[[audits.riscv-target]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+version = "0.1.2"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
 [[audits.rkv]]
 who = "Chris H-C <chutten@mozilla.com>"
 criteria = "safe-to-deploy"
@@ -10869,6 +10932,12 @@ who = "Mike Hommey <mh+mozilla@glandium.org>"
 criteria = "safe-to-deploy"
 delta = "0.8.0 -> 0.8.1"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.rtic-core]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+version = "1.0.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.rtic-monotonic]]
 who = "George Burgess IV <gbiv@google.com>"
@@ -11006,6 +11075,12 @@ Straightforward crate which runs `$RUSTC -vV` and parses the output into a
 machine-interpretable form for build scripts.
 """
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[audits.rustc_version]]
+who = "George Burgess IV <gbiv@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+version = "0.2.3"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.rustfft]]
 who = "Li-Yu Yu <aaronyu@google.com>"
@@ -15218,6 +15293,12 @@ delta = "0.6.3 -> 0.6.4"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
 [[audits.zstd]]
+who = "Matt Turner <msturner@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+version = "0.13.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.zstd]]
 who = "Alex Crichton <alex@alexcrichton.com>"
 criteria = "safe-to-deploy"
 delta = "0.11.1+zstd.1.5.2 -> 0.13.0"
@@ -15226,6 +15307,12 @@ No major updates to the crate here. Small updates to `unsafe` code which are
 refactorings of what was there prior.
 """
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
+[[audits.zstd-safe]]
+who = "Matt Turner <msturner@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+version = "7.0.0"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[audits.zstd-safe]]
 who = "Alex Crichton <alex@alexcrichton.com>"
@@ -15237,6 +15324,13 @@ Does contain new unsafe code, notably an implementation of an internal trait for
 the standard library `io::Cursor` type.
 """
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
+[[audits.zstd-sys]]
+who = "Matt Turner <msturner@google.com>"
+criteria = ["safe-to-run", "does-not-implement-crypto"]
+version = "2.0.9+zstd.1.5.5"
+notes = "Includes an implementation of xxhash (a non-cyptographic hashing function) as part of the zstd C sources"
+aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
 [[trusted.aho-corasick]]
 criteria = "safe-to-deploy"

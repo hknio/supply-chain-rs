@@ -5374,6 +5374,13 @@ updates.
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
 [[audits.fd-lock]]
+who = "Jan-Erik Rediger <jrediger@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "3.0.12 -> 3.0.13"
+notes = "Dependency updates only"
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
+
+[[audits.fd-lock]]
 who = "ChromeOS"
 criteria = "safe-to-run"
 version = "2.0.0"
@@ -15166,6 +15173,13 @@ version = "0.2.0"
 notes = "I, Henri Sivonen, wrote this crate myself for Gecko even though it's published on crates.io."
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.xshell-venv]]
+who = "Jan-Erik Rediger <jrediger@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "1.1.0 -> 1.2.0"
+notes = "Added a file lock on the created directory"
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
+
 [[audits.xxhash-rust]]
 who = "Taylor Cramer <cramertj@google.com>"
 criteria = "ub-risk-4"
@@ -16535,4 +16549,11 @@ criteria = "safe-to-deploy"
 user-id = 73222
 start = "2024-02-15"
 end = "2025-02-16"
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
+[[trusted.witx]]
+criteria = "safe-to-deploy"
+user-id = 1
+start = "2021-06-22"
+end = "2025-02-22"
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"

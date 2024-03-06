@@ -71,6 +71,16 @@ https://github.com/google/rust-crate-audits/blob/main/auditing_standards.md#ub-r
 implies = "ub-risk-2"
 aggregated-from = "https://fuchsia.googlesource.com/fuchsia/+/refs/heads/main/third_party/rust_crates/supply-chain/audits.toml?format=TEXT"
 
+[criteria.ub-risk-1-thorough]
+description = """
+Excellent soundness (established in a thorough review).
+
+Full description of the audit criteria can be found at
+https://github.com/google/rust-crate-audits/blob/main/auditing_standards.md#ub-risk-1-thorough
+"""
+implies = "ub-risk-1"
+aggregated-from = "https://raw.githubusercontent.com/google/rust-crate-audits/main/manual-sources/google3-audits.toml"
+
 [criteria.ub-risk-2]
 description = """
 Negligible unsoundness or average soundness.
@@ -80,6 +90,16 @@ https://github.com/google/rust-crate-audits/blob/main/auditing_standards.md#ub-r
 """
 implies = "ub-risk-3"
 aggregated-from = "https://fuchsia.googlesource.com/fuchsia/+/refs/heads/main/third_party/rust_crates/supply-chain/audits.toml?format=TEXT"
+
+[criteria.ub-risk-2-thorough]
+description = """
+Negligible unsoundness or average soundness (established in a thorough review).
+
+Full description of the audit criteria can be found at
+https://github.com/google/rust-crate-audits/blob/main/auditing_standards.md#ub-risk-2-thorough
+"""
+implies = "ub-risk-2"
+aggregated-from = "https://raw.githubusercontent.com/google/rust-crate-audits/main/manual-sources/google3-audits.toml"
 
 [criteria.ub-risk-3]
 description = """
@@ -3947,6 +3967,13 @@ aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-c
 who = "Jan-Erik Rediger <jrediger@mozilla.com>"
 criteria = "safe-to-deploy"
 delta = "0.5.8 -> 0.5.11"
+aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
+
+[[audits.crossbeam-channel]]
+who = "Jan-Erik Rediger <jrediger@mozilla.com>"
+criteria = "safe-to-deploy"
+delta = "0.5.11 -> 0.5.12"
+notes = "Minimal change fixing a memory leak."
 aggregated-from = "https://raw.githubusercontent.com/mozilla/glean/main/supply-chain/audits.toml"
 
 [[audits.crossbeam-channel]]
@@ -9305,6 +9332,16 @@ who = "Alex Crichton <alex@alexcrichton.com>"
 criteria = "safe-to-deploy"
 delta = "0.31.1 -> 0.32.0"
 notes = "Various new features and refactorings as one would expect from an object parsing crate, all looks good."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
+[[audits.object]]
+who = "Alex Crichton <alex@alexcrichton.com>"
+criteria = "safe-to-deploy"
+delta = "0.32.0 -> 0.33.0"
+notes = """
+No `unsafe` code in this update. Lots of changes but all
+object-file-format-related, everything looks good.
+"""
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
 [[audits.once_cell]]

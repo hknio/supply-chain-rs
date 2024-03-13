@@ -16607,6 +16607,13 @@ start = "2024-02-23"
 end = "2025-02-23"
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
+[[trusted.wit-bindgen-rt]]
+criteria = "safe-to-deploy"
+user-id = 73222
+start = "2024-03-04"
+end = "2025-03-11"
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
 [[trusted.wit-bindgen-rust]]
 criteria = "safe-to-deploy"
 user-id = 73222

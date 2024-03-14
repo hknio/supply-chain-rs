@@ -3250,6 +3250,13 @@ due to the major version bump.
 """
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
+[[audits.castaway]]
+who = "Andrew Brown <andrew.brown@intel.com>"
+criteria = "safe-to-deploy"
+version = "0.2.2"
+notes = "Very unsafe `transmute_unchecked` is used internally for downcasting; the crate is carefully written to maintain the necessary invariants."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
 [[audits.cbindgen]]
 who = "George Burgess IV <gbiv@google.com>"
 criteria = ["safe-to-run", "does-not-implement-crypto"]
@@ -3633,6 +3640,13 @@ Issues found:
  - https://github.com/watchexec/command-group/issues/19
 """
 aggregated-from = "https://raw.githubusercontent.com/google/rust-crate-audits/main/manual-sources/google3-audits.toml"
+
+[[audits.compact_str]]
+who = "David Justice <david@justice.dev"
+criteria = "safe-to-deploy"
+version = "0.7.1"
+notes = "This library has many uses of unsafe, but contains extensive fuzzing and miri testing."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
 [[audits.configparser]]
 who = "ChromeOS"
@@ -5592,6 +5606,13 @@ Reviewed in CL 573223148
 Issues from previous review (#379, #220) fixed (PRs #380, #373).
 """
 aggregated-from = "https://raw.githubusercontent.com/google/rust-crate-audits/main/manual-sources/google3-audits.toml"
+
+[[audits.flate2]]
+who = "Andrew Brown <andrew.brown@intel.com>"
+criteria = "safe-to-deploy"
+delta = "1.0.26 -> 1.0.28"
+notes = "No new `unsafe` and no large changes in function. This diff is mostly refactoring with a lot of docs, CI, test changes. Adds some defensive clearing out of certain variables as a safeguard."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
 [[audits.fleetspeak]]
 who = "Manish Goregaokar <manishearth@gmail.com>"
@@ -9552,6 +9573,20 @@ unsoundness there.
 """
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[audits.ort]]
+who = "Andrew Brown <andrew.brown@intel.com>"
+criteria = "safe-to-deploy"
+version = "2.0.0-rc.0"
+notes = "As expected, this crate uses `unsafe` to access the `unsafe` `ort-sys` FFI functions; it also includes several `unsafe` implementations of `Send` for several structures. With the `load-dynamic` feature enabled, this crate will be `libloading` external libraries to call FFI functions. With the `fetch-models` feature enabled, this crate can also download arbitrary models to the local filesystem."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
+[[audits.ort-sys]]
+who = "Andrew Brown <andrew.brown@intel.com>"
+criteria = "safe-to-deploy"
+version = "2.0.0-rc.0"
+notes = "As expected, this crate contains a significant number of `unsafe` definitions to expose the FFI surface of the ONNX libraries. Perhaps surprisingly, it also contains some `unsafe` system calls to locate the user's home directory. Another interesting bit is the `build.rs` script: with the `download-binaries` feature enabled, this script will retrieve and link various ONNX libraries from https://parcel.pyke.io. This seems par for the course with this kind of library, though; the alternative--attempting to find the library on an arbitrary system--can be quite complex."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
 [[audits.os_str_bytes]]
 who = "Mike Hommey <mh+mozilla@glandium.org>"
 criteria = "safe-to-deploy"
@@ -11988,6 +12023,13 @@ criteria = ["safe-to-run", "does-not-implement-crypto"]
 version = "1.1.0"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
+[[audits.static_assertions]]
+who = "Andrew Brown <andrew.brown@intel.com>"
+criteria = "safe-to-deploy"
+version = "1.1.0"
+notes = "No dependencies and completely a compile-time crate as advertised. Uses `unsafe` in one module as a compile-time check only: `mem::transmute` and `ptr::write` are wrapped in an impossible-to-run closure."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
 [[audits.strck]]
 who = "Makoto Kato <m_kato@ga2.so-net.ne.jp>"
 criteria = "safe-to-deploy"
@@ -13680,6 +13722,13 @@ criteria = ["safe-to-run", "does-not-implement-crypto"]
 version = "0.5.1"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
+[[audits.ureq]]
+who = "Andrew Brown <andrew.brown@intel.com>"
+criteria = "safe-to-deploy"
+version = "2.9.1"
+notes = "As advertised, the crate is a blocking HTTP client library; it uses no `unsafe`. Security-conscious users might want to audit its dependencies for crypto-related functionality (e.g., TLS)."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
 [[audits.url]]
 who = "Valentin Gosu <valentin.gosu@gmail.com>"
 criteria = "safe-to-deploy"
@@ -15215,6 +15264,13 @@ criteria = ["safe-to-run", "does-not-implement-crypto"]
 version = "1.0.1"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
 
+[[audits.xattr]]
+who = "Andrew Brown <andrew.brown@intel.com>"
+criteria = "safe-to-deploy"
+version = "1.2.0"
+notes = "This crate contains `unsafe` calls to libc `extattr_*` functions as one would expect from the crate's purpose."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
 [[audits.xmldecl]]
 who = "Henri Sivonen <hsivonen@hsivonen.fi>"
 criteria = "safe-to-deploy"
@@ -15550,6 +15606,13 @@ start = "2021-01-11"
 end = "2024-05-05"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
 
+[[trusted.bytes]]
+criteria = "safe-to-deploy"
+user-id = 6741
+start = "2021-01-11"
+end = "2025-02-15"
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
 [[trusted.cap-fs-ext]]
 criteria = "safe-to-deploy"
 user-id = 6825
@@ -15725,12 +15788,26 @@ start = "2020-03-17"
 end = "2024-07-14"
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
+[[trusted.filetime]]
+criteria = "safe-to-deploy"
+user-id = 1
+start = "2019-04-23"
+end = "2025-02-15"
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
 [[trusted.flate2]]
 criteria = "safe-to-deploy"
 user-id = 4333
 start = "2020-09-30"
 end = "2024-05-05"
 aggregated-from = "https://hg.mozilla.org/mozilla-central/raw-file/tip/supply-chain/audits.toml"
+
+[[trusted.flate2]]
+criteria = "safe-to-deploy"
+user-id = 4333
+start = "2020-09-30"
+end = "2025-02-15"
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
 [[trusted.fs-set-times]]
 criteria = "safe-to-deploy"
@@ -16227,6 +16304,13 @@ criteria = "safe-to-deploy"
 user-id = 6825
 start = "2020-10-27"
 end = "2024-07-14"
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
+[[trusted.tar]]
+criteria = "safe-to-deploy"
+user-id = 1
+start = "2019-03-04"
+end = "2025-02-15"
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
 [[trusted.target-lexicon]]

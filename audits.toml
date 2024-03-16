@@ -5816,6 +5816,13 @@ delta = "0.18.1 -> 0.19.1"
 notes = "Just a dependency version bump"
 aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
+[[audits.fslock]]
+who = "Alex Crichton <alex@alexcrichton.com>"
+criteria = "safe-to-run"
+delta = "0.1.8 -> 0.2.1"
+notes = "Internal and external refactorings plus `unsafe` where one would expect."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
+
 [[audits.funty]]
 who = "ChromeOS"
 criteria = "safe-to-run"
@@ -6873,6 +6880,13 @@ criteria = ["ub-risk-2", "does-not-implement-crypto"]
 delta = "0.5.4 -> 0.5.5"
 notes = "Reviewed in CL 566644164"
 aggregated-from = "https://raw.githubusercontent.com/google/rust-crate-audits/main/manual-sources/google3-audits.toml"
+
+[[audits.home]]
+who = "Alex Crichton <alex@alexcrichton.com>"
+criteria = "safe-to-run"
+delta = "0.5.3 -> 0.5.9"
+notes = "No major changes, just some internal refactorings."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
 [[audits.hostname]]
 who = "George Burgess IV <gbiv@google.com>"
@@ -15134,6 +15148,13 @@ who = "Android Legacy"
 criteria = "safe-to-run"
 version = "4.0.2"
 aggregated-from = "https://chromium.googlesource.com/chromiumos/third_party/rust_crates/+/refs/heads/main/cargo-vet/audits.toml?format=TEXT"
+
+[[audits.which]]
+who = "Alex Crichton <alex@alexcrichton.com>"
+criteria = "safe-to-run"
+delta = "4.4.0 -> 5.0.0"
+notes = "Only one `unsafe` block, it's what a `which` crate is expected to be."
+aggregated-from = "https://raw.githubusercontent.com/bytecodealliance/wasmtime/main/supply-chain/audits.toml"
 
 [[audits.winnow]]
 who = "Taylor Cramer <cramertj@google.com>"
